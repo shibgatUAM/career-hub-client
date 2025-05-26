@@ -1,6 +1,3 @@
----
-
-```markdown
 # 💼 careerHUB
 
 **careerHUB** is a modern, responsive job posting platform built with React. It allows job seekers to browse and apply for jobs, and employers to post job openings. The platform is built with a clean and dynamic UI/UX and supports interactive alerts, authentication, animations, and more.
@@ -70,8 +67,6 @@ careerHUB/
    cd career-hub-client
    ```
 
-````
-
 2. **Install dependencies**
 
    ```bash
@@ -101,15 +96,15 @@ careerHUB/
 
 ## 🧪 Available Scripts
 
-* `npm run dev` – Start development server
-* `npm run build` – Generate production build
-* `npm run preview` – Preview production build locally
+- `npm run dev` – Start development server
+- `npm run build` – Generate production build
+- `npm run preview` – Preview production build locally
 
 ---
 
 ## 📷 Screenshots
 
-*Add screenshots of your app here for better preview and documentation.*
+_Add screenshots of your app here for better preview and documentation._
 
 ---
 
@@ -117,9 +112,9 @@ careerHUB/
 
 You can deploy the project using:
 
-* [Firebase Hosting](https://firebase.google.com/docs/hosting)
-* [Netlify](https://www.netlify.com/)
-* [Vercel](https://vercel.com/)
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
 
 Let me know if you want a deployment guide for any of these platforms.
 
@@ -127,15 +122,15 @@ Let me know if you want a deployment guide for any of these platforms.
 
 ## 🙌 Acknowledgements
 
-* [React](https://reactjs.org/)
-* [React Router](https://reactrouter.com/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [daisyUI](https://daisyui.com/)
-* [Firebase](https://firebase.google.com/)
-* [React Toastify](https://fkhadra.github.io/react-toastify/)
-* [SweetAlert2](https://sweetalert2.github.io/)
-* [Framer Motion](https://www.framer.com/motion/)
-* [React Icons](https://react-icons.github.io/react-icons/)
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [daisyUI](https://daisyui.com/)
+- [Firebase](https://firebase.google.com/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
 ---
 
@@ -163,4 +158,3 @@ Let me know if you want:
 - Badges (npm version, license, deployment status)
 - Deployment walkthrough (Firebase, Netlify, or Vercel)
 ```
-````
