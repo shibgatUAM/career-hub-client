@@ -1,8 +1,8 @@
-Here's a well-structured `README.md` file for your **careerHUB** React project:
+Here's a well-structured `README.md` file **careerHUB** React project:
 
 ---
 
-```markdown
+````markdown
 # careerHUB
 
 **careerHUB** is a modern and responsive job posting web application built with React. It allows job seekers to browse and apply for jobs, and employers to post job openings. The platform is designed with a clean UI/UX and provides interactive feedback using animations and alerts.
@@ -39,35 +39,19 @@ Here's a well-structured `README.md` file for your **careerHUB** React project:
 ---
 
 ## 📁 Project Structure
-```
 
-careerHUB/
-├── public/
-├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── pages/
-│ ├── routes/
-│ ├── services/
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── .env
-├── tailwind.config.js
-├── package.json
-└── README.md
-
-````
+<pre lang="text"> ``` careerHUB/ ├── public/ ├── src/ │ ├── assets/ │ ├── components/ │ ├── pages/ │ ├── routes/ │ ├── services/ │ ├── App.jsx │ ├── main.jsx │ └── index.css ├── .env ├── tailwind.config.js ├── package.json └── README.md ``` </pre>
 
 ---
 
 ## 📦 Installation
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/your-username/careerHUB.git
-   cd careerHUB
-````
+   git clone https://github.com/shibgatUAM/career-hub-client.git
+   cd career-hub-client
+   ```
 
 2. **Install dependencies**
 
@@ -139,3 +123,4 @@ Contact: \[[me@shibgat.me](mailto:me@shibgat.me)]
 
 Let me know if you want me to include instructions for deploying to Firebase, Netlify, or Vercel.
 ```
+````
