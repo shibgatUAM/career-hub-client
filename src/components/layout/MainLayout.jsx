@@ -18,7 +18,6 @@ const MainLayout = () => {
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center bg-white">
-        {/* <span className="loading loading-ring loading-xl"></span> */}
         <Lottie
           animationData={loadingAnimation}
           loop={true}

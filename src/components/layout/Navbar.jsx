@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-10 font-medium text-base opacity-60">
-          <NavLink>Home</NavLink>
+          <NavLink to="/">Home</NavLink>
           <NavLink>Jobs</NavLink>
           <NavLink>About Us</NavLink>
           <NavLink>Contact Us</NavLink>
