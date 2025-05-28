@@ -1,10 +1,10 @@
 import React from 'react';
 import { PiSuitcaseSimpleFill } from 'react-icons/pi';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-[#121415] text-white shadow-sm px-10">
+    <div className="navbar bg-[#222222] text-white shadow-sm px-10 sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,8 +64,11 @@ const Navbar = () => {
           <NavLink>Contact Us</NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-6">
+        <Link className="">Login</Link>
+        <Link className="bg-[#309689] px-6 py-2 rounded-md font-bold">
+          Register
+        </Link>
       </div>
     </div>
   );
