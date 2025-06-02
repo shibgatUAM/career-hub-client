@@ -57,11 +57,47 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-10 font-medium text-base opacity-60">
-          <NavLink to="/">Home</NavLink>
-          <NavLink>Jobs</NavLink>
-          <NavLink>About Us</NavLink>
-          <NavLink>Contact Us</NavLink>
+        <ul className="menu menu-horizontal px-1 space-x-10 ">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? 'font-bold text-base'
+                : 'font-medium text-base opacity-60'
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/jobs"
+            className={({ isActive }) =>
+              isActive
+                ? 'font-bold text-base'
+                : 'font-medium text-base opacity-60'
+            }
+          >
+            Jobs
+          </NavLink>
+          <NavLink
+            to="/about-us"
+            className={({ isActive }) =>
+              isActive
+                ? 'font-bold text-base'
+                : 'font-medium text-base opacity-60'
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              isActive
+                ? 'font-bold text-base'
+                : 'font-medium text-base opacity-60'
+            }
+          >
+            Contact Us
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end space-x-6">
