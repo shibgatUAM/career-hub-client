@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import bannerImage from '../../assets/images/banner.jpg';
 import { motion } from 'motion/react';
 import { FaAngleDown, FaSearch } from 'react-icons/fa';
@@ -6,8 +6,19 @@ import { IoBriefcase } from 'react-icons/io5';
 import { FaPeopleGroup } from 'react-icons/fa6';
 import { BsBuildingFill, BsBuildingsFill } from 'react-icons/bs';
 import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const Banner = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    setShouldAnimate(inView);
+  }, [inView]);
+
   return (
     <>
       <div className="relative h-screen flex items-center justify-center text-white overflow-hidden">
@@ -85,7 +96,7 @@ const Banner = () => {
               <option value="hr">Human Resources</option>
               <option value="construction">Construction</option>
             </select>
-            <button className="flex items-center gap-2 bg-[#309689] text-white px-8 py-5 rounded-r-full hover:bg-[#267f74] transition">
+            <button className="flex items-center gap-2 bg-[#309689] text-white px-8 py-5 rounded-r-full hover:bg-[#267f74] transition cursor-pointer">
               <FaSearch />
               Search Job
             </button>
@@ -96,9 +107,15 @@ const Banner = () => {
               <div className="bg-[#309689] rounded-full p-4">
                 <IoBriefcase size={30}></IoBriefcase>
               </div>
-              <div>
+              <div ref={ref}>
                 <h1 className="font-bold text-lg">
-                  <CountUp start={0} end={25850}></CountUp>
+                  {shouldAnimate && (
+                    <CountUp
+                      end={25850}
+                      duration={2}
+                      useEasing={false}
+                    ></CountUp>
+                  )}
                 </h1>
                 <h3 className="text-white text-base opacity-80">Jobs</h3>
               </div>
@@ -107,9 +124,15 @@ const Banner = () => {
               <div className="bg-[#309689] rounded-full p-4">
                 <FaPeopleGroup size={30}></FaPeopleGroup>
               </div>
-              <div>
+              <div ref={ref}>
                 <h1 className="font-bold text-lg">
-                  <CountUp start={0} end={10250}></CountUp>
+                  {shouldAnimate && (
+                    <CountUp
+                      end={10250}
+                      duration={2}
+                      useEasing={false}
+                    ></CountUp>
+                  )}
                 </h1>
                 <h3 className="text-white text-base opacity-80">Candidates</h3>
               </div>
@@ -118,9 +141,15 @@ const Banner = () => {
               <div className="bg-[#309689] rounded-full p-4">
                 <BsBuildingsFill size={30}></BsBuildingsFill>
               </div>
-              <div>
+              <div ref={ref}>
                 <h1 className="font-bold text-lg">
-                  <CountUp start={0} end={18400}></CountUp>
+                  {shouldAnimate && (
+                    <CountUp
+                      end={18400}
+                      duration={2}
+                      useEasing={false}
+                    ></CountUp>
+                  )}
                 </h1>
                 <h3 className="text-white text-base opacity-80">Companies</h3>
               </div>

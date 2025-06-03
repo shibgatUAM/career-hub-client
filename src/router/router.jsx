@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import Jobs from '../pages/Jobs';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Login from '../pages/auth/Login';
+import Register from '../pages/auth/Register';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: '/contact-us',
         Component: Contact,
+      },
+      {
+        path: '/login',
+        Component: Login,
+      },
+      {
+        path: '/register',
+        Component: Register,
       },
     ],
   },

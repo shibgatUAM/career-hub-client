@@ -1,8 +1,13 @@
 import React from 'react';
 import { PiSuitcaseSimpleFill } from 'react-icons/pi';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const isLogin = location.pathname === '/login';
+  const isRegister = location.pathname === '/register';
+
   return (
     <div className="navbar bg-[#222222] text-white shadow-sm px-10 sticky top-0 z-50">
       <div className="navbar-start">
@@ -101,8 +106,24 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-6">
-        <Link className="">Login</Link>
-        <Link className="bg-[#309689] px-6 py-2 rounded-md font-bold">
+        <Link
+          to="/login"
+          className={`px-6 py-2 rounded-md font-bold transition-all duration-200 ${
+            isLogin
+              ? 'bg-[#309689] text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          Login
+        </Link>
+        <Link
+          to="/register"
+          className={`px-6 py-2 rounded-md font-bold transition-all duration-200 ${
+            isRegister
+              ? 'bg-[#309689] text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
           Register
         </Link>
       </div>
