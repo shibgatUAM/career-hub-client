@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
+import { LuEye } from 'react-icons/lu';
 import { Link } from 'react-router';
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="w-4/12 m-auto max-w-md p-8 mt-12 space-y-3 rounded-xl bg-[#EBF5F4]">
       <h1 className="text-4xl font-bold text-center mb-8">Login</h1>
@@ -24,13 +27,26 @@ const Login = () => {
           <label htmlFor="password" className="block font-bold">
             Password
           </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
-          />
+          <div className="relative">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              id="password"
+              placeholder="Password"
+              className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
+            />
+            <span
+              className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              {showPassword ? (
+                <FaRegEyeSlash size={20}></FaRegEyeSlash>
+              ) : (
+                <LuEye size={20}></LuEye>
+              )}
+            </span>
+          </div>
+
           <div className="flex justify-end text-xs dark:text-gray-600">
             <a rel="noopener noreferrer" href="#">
               Forgot Password?

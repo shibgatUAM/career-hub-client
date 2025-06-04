@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { FaRegEyeSlash } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
+import { LuEye } from 'react-icons/lu';
 import { Link } from 'react-router';
 
 const Register = () => {
@@ -40,25 +42,49 @@ const Register = () => {
           <label htmlFor="password" className="block font-bold">
             Password
           </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
-          />
+          <div className="relative">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              id="password"
+              placeholder="Password"
+              className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
+            />
+            <span
+              className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              {showPassword ? (
+                <FaRegEyeSlash size={20}></FaRegEyeSlash>
+              ) : (
+                <LuEye size={20}></LuEye>
+              )}
+            </span>
+          </div>
         </div>
         <div className="space-y-1 font-medium">
           <label htmlFor="confirm-password" className="block font-bold">
             Confirm Password
           </label>
-          <input
-            type="password"
-            name="confirm-password"
-            id="confirm-password"
-            placeholder="Confirm Password"
-            className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
-          />
+          <div className="relative">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              className="w-full px-4 py-3 rounded-md bg-white placeholder-gray-400"
+            />
+            <span
+              className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              {showPassword ? (
+                <FaRegEyeSlash size={20}></FaRegEyeSlash>
+              ) : (
+                <LuEye size={20}></LuEye>
+              )}
+            </span>
+          </div>
         </div>
         <button className="block w-full p-3 text-center rounded-sm bg-[#309689] text-white font-bold cursor-pointer">
           Sign up
